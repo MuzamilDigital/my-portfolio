@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muzamil Digital Gallery</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            text-align: center; 
+            margin: 0; 
+            padding: 20px; 
+            /* AAPKI PAINTING YAHAN LAGAYEGI */
+            background-image: url('my-bg.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed;
+            color: white; /* Agar painting dark hai to white text achha lagega */
+        }
+        .gallery { 
+            display: flex; 
+            justify-content: center; 
+            gap: 30px; 
+            padding: 40px 20px; 
+            flex-wrap: wrap; 
+        }
+        .card { 
+            background: rgba(0, 0, 0, 0.6); /* Halka transparent kaala dabba */
+            backdrop-filter: blur(10px); /* Glass jaisa effect */
+            padding: 15px; 
+            border-radius: 20px; 
+            width: 280px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+            transition: 0.4s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .card:hover { 
+            transform: translateY(-15px); 
+            border-color: #00d4ff; 
+            box-shadow: 0 15px 35px rgba(0, 212, 255, 0.3);
+        }
+        .card img { 
+            width: 100%; 
+            border-radius: 15px; 
+            height: 350px; 
+            object-fit: cover; 
+        }
+        .card h3 { margin-top: 15px; font-weight: 500; }
+        .btn { 
+            display: inline-block; 
+            margin-top: 15px; 
+            padding: 12px; 
+            background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
+            color: white; 
+            text-decoration: none; 
+            border-radius: 10px; 
+            font-weight: bold; 
+            width: 90%;
+            transition: 0.3s;
+        }
+        .btn:hover { transform: scale(1.05); filter: brightness(1.1); }
+        h1 { 
+            font-size: 3em; 
+            margin-top: 50px; 
+            text-shadow: 0 0 20px rgba(0,0,0,0.5); 
+        }
+        p { font-size: 1.2em; opacity: 0.8; }
+    </style>
+</head>
+<body>
+
+    <h1>Muzamil Digital Gallery</h1>
+    <p>Professional Canva Designs & Creative Art</p>
+
+    <div class="gallery">
+        <div class="card"><img src="coffee.png"><h3>Morning Coffee</h3><a href="https://wa.me/923036780703" class="btn">Order on WhatsApp</a></div>
+        <div class="card"><img src="penguins.png"><h3>Creative Penguins</h3><a href="https://wa.me/923036780703" class="btn">Order on WhatsApp</a></div>
+        <div class="card"><img src="Black Panther.png"><h3>Black Panther</h3><a href="https://wa.me/923036780703" class="btn">Order on WhatsApp</a></div>
+        <div class="card"><img src="my digital pic.png"><h3>My Digital Art</h3><a href="https://wa.me/923036780703" class="btn">Order on WhatsApp</a></div>
+    </div>
+
+</body>
+</html>
