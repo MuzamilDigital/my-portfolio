@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muzamil Digital Gallery</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            text-align: center; 
+            background-color: #000000; /* Bilkul Kaala Background */
+            margin: 0; 
+            padding: 20px; 
+            color: #ffffff;
+        }
+        .gallery { display: flex; justify-content: center; gap: 25px; padding: 20px; flex-wrap: wrap; }
+        .card { 
+            background: #111111; /* Gehra dabba */
+            padding: 15px; 
+            border-radius: 12px; 
+            width: 280px; 
+            box-shadow: 0 4px 20px rgba(255,255,255,0.05); 
+            transition: 0.4s;
+            border: 1px solid #333;
+        }
+        .card:hover { transform: translateY(-10px); border-color: #ffffff; }
+        .card img { width: 100%; border-radius: 8px; height: 350px; object-fit: cover; }
+        .card h3 { margin-top: 15px; color: #ffffff; }
+        .btn { 
+            display: inline-block; 
+            margin-top: 15px; 
+            padding: 12px; 
+            background: #ffffff; 
+            color: #000000; 
+            text-decoration: none; 
+            border-radius: 6px; 
+            font-weight: bold; 
+            width: 90%;
+        }
+        .btn:hover { background: #25D366; color: white; }
+        h1 { font-size: 2.5em; margin-top: 40px; }
+        p { color: #888; }
+    </style>
+</head>
+<body>
+
+    <h1>Muzamil Digital Gallery</h1>
+    <p>Premium Digital Designs Portfolio</p>
+
+    <div class="gallery">
+        <div class="card"><img src="coffee.png"><h3>Morning Coffee</h3><a href="https://wa.me/923036780703" class="btn">Order on WhatsApp</a></div>
+        <div class="card"><img src="penguins.png"><h3>Creative Penguins</h3><a href="https://wa.me/923036780703" class="btn">Order on WhatsApp</a></div>
+        <div class="card"><img src="Black Panther.png"><h3>Black Panther Design</h3><a href="https://wa.me/923036780703" class="btn">Order on WhatsApp</a></div>
+        <div class="card"><img src="my digital pic.png"><h3>My Digital Art</h3><a href="https://wa.me/923036780703" class="btn">Order on WhatsApp</a></div>
+    </div>
+
+</body>
+</html>
