@@ -1,81 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="ur">
 <head>
-    <title>Muzamil Digital Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muzamil Portfolio</title>
     <style>
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
-            text-align: center; 
-            margin: 0; 
-            padding: 20px; 
-            /* AAPKI PAINTING YAHAN LAGAYEGI */
-            background-image: url('my-bg.png'); 
-            background-size: cover; 
-            background-position: center; 
-            background-attachment: fixed;
-            color: white; /* Agar painting dark hai to white text achha lagega */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
         }
-        .gallery { 
-            display: flex; 
-            justify-content: center; 
-            gap: 30px; 
-            padding: 40px 20px; 
-            flex-wrap: wrap; 
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
         }
-        .card { 
-            background: rgba(0, 0, 0, 0.6); /* Halka transparent kaala dabba */
-            backdrop-filter: blur(10px); /* Glass jaisa effect */
-            padding: 15px; 
-            border-radius: 20px; 
-            width: 280px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
-            transition: 0.4s;
-            border: 1px solid rgba(255,255,255,0.1);
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 20px;
         }
-        .card:hover { 
-            transform: translateY(-15px); 
-            border-color: #00d4ff; 
-            box-shadow: 0 15px 35px rgba(0, 212, 255, 0.3);
+        h1 { margin: 0; font-size: 36px; }
+        h2 { text-align: center; color: #1a1a1a; margin-bottom: 30px; }
+        
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
         }
-        .card img { 
-            width: 100%; 
-            border-radius: 15px; 
-            height: 350px; 
-            object-fit: cover; 
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
-        .card h3 { margin-top: 15px; font-weight: 500; }
-        .btn { 
-            display: inline-block; 
-            margin-top: 15px; 
-            padding: 12px; 
-            background: linear-gradient(90deg, #25D366 0%, #128C7E 100%);
-            color: white; 
-            text-decoration: none; 
-            border-radius: 10px; 
-            font-weight: bold; 
-            width: 90%;
-            transition: 0.3s;
+        .card:hover {
+            transform: translateY(-10px);
         }
-        .btn:hover { transform: scale(1.05); filter: brightness(1.1); }
-        h1 { 
-            font-size: 3em; 
-            margin-top: 50px; 
-            text-shadow: 0 0 20px rgba(0,0,0,0.5); 
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
-        p { font-size: 1.2em; opacity: 0.8; }
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+        .card-content h3 {
+            margin: 10px 0;
+            font-size: 20px;
+            color: #1a73e8;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #1a1a1a;
+            color: white;
+            margin-top: 50px;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Muzamil Digital Gallery</h1>
-    <p>Professional Canva Designs & Creative Art</p>
+<header>
+    <h1>Muzamil Graphic Designer</h1>
+    <p>Professional Canva Expert | Tech & Marketing Ads</p>
+</header>
 
-    <div class="gallery">
-        <div class="card"><img src="coffee.png"><h3>Morning Coffee</h3><a href="https://wa.me/923036780703" class="btn">Order on WhatsApp</a></div>
-        <div class="card"><img src="penguins.png"><h3>Creative Penguins</h3><a href="https://wa.me/923036780703" class="btn">Order on WhatsApp</a></div>
-        <div class="card"><img src="Black Panther.png"><h3>Black Panther</h3><a href="https://wa.me/923036780703" class="btn">Order on WhatsApp</a></div>
-        <div class="card"><img src="my digital pic.png"><h3>My Digital Art</h3><a href="https://wa.me/923036780703" class="btn">Order on WhatsApp</a></div>
+<div class="container">
+    <h2>Mera Portfolio</h2>
+    
+    <div class="portfolio-grid">
+        
+        <div class="card">
+            <img src="iphone-design.jpg" alt="iPhone 15 Ad">
+            <div class="card-content">
+                <h3>Smartphone Ad</h3>
+                <p>Canva Tech Design</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="My-Burger-design.jpg" alt="Burger Deal">
+            <div class="card-content">
+                <h3>Fast Food Deal</h3>
+                <p>Social Media Food Ad</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Modern-car.jpg" alt="Car Review">
+            <div class="card-content">
+                <h3>Luxury Car Review</h3>
+                <p>YouTube Thumbnail</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="House-design.jpg" alt="Real Estate Ad">
+            <div class="card-content">
+                <h3>Real Estate Ad</h3>
+                <p>Property Marketing</p>
+            </div>
+        </div>
+
     </div>
+</div>
+
+<footer>
+    <p>Contact me: +923036780703</p>
+    <p>&copy; 2026 Muzamil.Shop - All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
