@@ -3,107 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muzamil Multi-Portfolio</title>
+    <title>Muzamil Gallery Portfolio</title>
     <style>
         body { 
             font-family: sans-serif; 
             margin: 0; 
-            /* یہاں میں نے ایک خوبصورت نیلا اور کالا بیک گراؤنڈ لگا دیا ہے */
-            background: linear-gradient(135deg, #1a1a1a 0%, #001f3f 100%);
+            background-image: url('my-bg'); /* Aapka background */
+            background-size: cover;
+            background-position: center;
             background-attachment: fixed;
             color: white;
         }
         header { 
-            background: rgba(0, 0, 0, 0.7); 
-            color: white; 
-            padding: 30px; 
+            background: rgba(0, 0, 0, 0.8); 
+            padding: 40px; 
             text-align: center;
-            border-bottom: 2px solid #1a73e8;
+            border-bottom: 3px solid #1a73e8;
         }
-        .container { max-width: 1200px; margin: auto; padding: 20px; }
+        .gallery-container { 
+            max-width: 1200px; 
+            margin: 30px auto; 
+            padding: 10px;
+        }
         h2 { 
             text-align: center; 
             background: #1a73e8; 
-            padding: 10px; 
-            border-radius: 5px;
-            margin-top: 40px; 
+            padding: 15px; 
+            border-radius: 8px;
+            margin: 40px 0 20px 0;
         }
         
-        .grid {
+        /* Gallery Style Layout */
+        .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
         }
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
+        .gallery-item {
+            position: relative;
             overflow: hidden;
-            text-align: center;
-            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            border: 2px solid rgba(255,255,255,0.2);
+            height: 250px;
+            cursor: pointer;
+            transition: transform 0.4s;
         }
-        .card img { 
+        .gallery-item:hover {
+            transform: scale(1.05);
+            border-color: #1a73e8;
+        }
+        .gallery-item img { 
             width: 100%; 
-            height: 220px; 
-            object-fit: contain; 
-            background: #000;
+            height: 100%; 
+            object-fit: cover; /* Images gallery ki tarah set hongi */
         }
-        .card-content { padding: 10px; color: white; }
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Muzamil Digital Hub</h1>
-    <p>Graphic Design & Web Development Portfolio</p>
+    <h1>Muzamil's Creative Gallery</h1>
+    <p>Graphic Design & Professional Ads</p>
 </header>
 
-<div class="container">
+<div class="gallery-container">
 
     <h2>Naye Canva Designs</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="iphone-design.png" alt="iPhone Ad">
-            <div class="card-content"><h3>iPhone 15 Ad</h3></div>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="iphone-design" alt="iPhone Ad">
+            <div class="image-caption">iPhone 15 Design</div>
         </div>
-        <div class="card">
-            <img src="My-Burger-design.png" alt="Burger Ad">
-            <div class="card-content"><h3>Burger Deal</h3></div>
+        <div class="gallery-item">
+            <img src="My-Burger-design" alt="Burger Ad">
+            <div class="image-caption">Burger & Fries Ad</div>
         </div>
-        <div class="card">
-            <img src="Modern-car.png" alt="Car Ad">
-            <div class="card-content"><h3>Luxury Car Review</h3></div>
+        <div class="gallery-item">
+            <img src="Modern-car" alt="Car Ad">
+            <div class="image-caption">Luxury Car Review</div>
         </div>
-        <div class="card">
-            <img src="House-design.png" alt="House Ad">
-            <div class="card-content"><h3>Real Estate Ad</h3></div>
+        <div class="gallery-item">
+            <img src="House-design" alt="House Ad">
+            <div class="image-caption">Real Estate Design</div>
         </div>
     </div>
 
     <h2>Mera Purana Kaam</h2>
-    <div class="grid">
-        <div class="card">
-            <img src="Black Panther.png" alt="Logo">
-            <div class="card-content"><h3>Logo Design</h3></div>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="Black Panther" alt="Logo">
+            <div class="image-caption">Black Panther Logo</div>
         </div>
-        <div class="card">
-            <img src="coffee.png" alt="Coffee">
-            <div class="card-content"><h3>Photography</h3></div>
+        <div class="gallery-item">
+            <img src="coffee" alt="Coffee">
+            <div class="image-caption">Good Morning Coffee</div>
         </div>
-        <div class="card">
-            <img src="my digital pic.png" alt="My Pic">
-            <div class="card-content"><h3>Digital Profile</h3></div>
+        <div class="gallery-item">
+            <img src="my digital pic" alt="My Pic">
+            <div class="image-caption">Digital Profile</div>
         </div>
-        <div class="card">
-            <img src="my-bg.png" alt="Background">
-            <div class="card-content"><h3>Background Art</h3></div>
+        <div class="gallery-item">
+            <img src="penguins" alt="Penguins">
+            <div class="image-caption">Nature Photography</div>
         </div>
     </div>
 
 </div>
 
-<footer>
-    <p style="text-align: center; padding: 20px;">Contact: +923036780703</p>
+<footer style="text-align: center; padding: 40px; background: rgba(0,0,0,0.8);">
+    <p>Contact for Design: +923036780703</p>
 </footer>
 
 </body>
